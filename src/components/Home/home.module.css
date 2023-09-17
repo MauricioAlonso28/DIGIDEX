@@ -1,0 +1,21 @@
+.divCard {
+    background: url('../../resources/img/D-Scan-V2.png');
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center;
+    height: 320px;
+    width: 200px;
+    position: relative;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imgCard {
+    position: absolute;
+    height: 73px;
+    width: 73px;
+    top: 20.5%;
+    left: 24.5%;
+    border-radius: 5px;
+}

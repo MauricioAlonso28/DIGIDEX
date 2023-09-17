@@ -1,0 +1,99 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+}
+.digicard {
+    height: 450px;
+    width: 500px;
+    background: url('../../resources/img/DigideviceNoBG.png');
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+}
+.img {
+    height: 140px;
+    border-radius: 10px;
+    width: 140px;
+}
+.btn {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #9bdeff;
+    font-size: 10px;
+}
+.btnI {
+    left: 12%;
+    font-size: 20px;
+}
+.btnN {
+    right: 12%;
+    top: 35.5%;
+}
+.btnP {
+    right: 11.5%;
+    bottom: 35%;
+}
+
+/* INFOCARD */
+.bigContainer {
+    left: 10%;
+    border-radius: 10px;
+    width: 450px;
+    height: 650px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4);
+    position: absolute;
+}
+.infoCard {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+}
+.title  {
+    position: relative;
+    height: 20%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.infoBtn {
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 22px;
+    top: 10%;
+    left: 5%;
+}
+.name {
+    font-family: 'Pixel Digivolve', sans-serif;
+    transform: skew(-10deg, 0);
+    font-size: 21px;
+}
+.infoCardImg {
+    position: relative;
+    height: 34%;
+}
+.infoDetails {
+    position: relative;
+    height: 46%;
+    padding: 15px;
+    text-align: center;
+    font-family: 'Pixel Digivolve', sans-serif
+}
+.detailPower {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.span {
+    font-size: 11px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black
+}
