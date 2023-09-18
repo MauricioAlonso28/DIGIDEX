@@ -16,9 +16,24 @@ export const favoritesSlice = createSlice({
             const newCharacters = state.myFavorites.filter((fav) => fav.id !== action.payload.id)
 
             state.myFavorites = [...newCharacters]
+        },
+        orderFav: (state, action) => {
+            const newOrder = state.myFavorites.slice().sort((a, b) => {
+                if (action.payload === "asc") {
+                    return a.id - b.id;
+                } else if (action.payload === "desc") {
+                    return b.id - a.id;
+                }
+                return 0;
+            });
+            
+            return {
+                ...state,
+                myFavorites: [...newOrder],
+            };
         }
     }
 })
 
-export const { addFav, deleteFav } = favoritesSlice.actions
+export const { addFav, deleteFav, orderFav } = favoritesSlice.actions
 export default favoritesSlice.reducer

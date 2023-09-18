@@ -20,7 +20,7 @@ function Home (){
 
                 content.map((obj) => {
                     if (digimonsPush.length < 24) {
-                        digimonsPush.push(obj)
+                        digimonsPush.push(obj)                                                                              
                     }
                 })
                 count++
