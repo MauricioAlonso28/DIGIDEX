@@ -6,10 +6,13 @@
     height: 320px;
     width: 200px;
     position: relative;
-    /* background-color: red; */
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+.divCard:hover {
+    transform: scale(1.2);
 }
 .imgCard {
     position: absolute;
@@ -18,4 +21,13 @@
     top: 20.5%;
     left: 24.5%;
     border-radius: 5px;
+}
+.btn {
+    position: absolute;
+    bottom: 22.5%;
+    left: 27.3%;
+    transition: all 0.3s ease-in-out;
+}
+.btn:hover {
+    transform: scale(1.2);
 }

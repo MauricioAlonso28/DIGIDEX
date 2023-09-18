@@ -37,7 +37,7 @@ function Home (){
     }, [])
     return (
         <>
-            <div className="w-11/12 mx-auto flex justify-center items-center pt-20 px-14 pb-12 flex-wrap gap-48">
+            <div className="w-11/12 mx-auto flex justify-center items-center pt-20 px-14 flex-wrap gap-48">
                 {/* LOOP THROUGH EACH DIGIMON */}
                 {
                     digimons.map((obj) => {
@@ -47,6 +47,7 @@ function Home (){
                                     key={obj.id}
                                     id={obj.id}
                                     image={obj.image}
+                                    name={obj.name}
                                 />
                             </>
                         )

@@ -3,8 +3,8 @@ import { useLocation, Routes, Route } from "react-router-dom";
 import Home from "./components/Home/Home";
 import Navbar from "./components/Navbar/Navbar";
 import Favorites from "./components/Favorites/Favorites"
-import { garumon } from './objectTest.js'
 import Detail from "./components/Detail/Detail";
+import Button from "./components/Button/Button";
 
 function App() {
     const location = useLocation()
@@ -21,7 +21,7 @@ function App() {
                 />
                 <Route
                     path="/home"
-                    element={<Home digimon={garumon}/>}
+                    element={<Home/>}
                 />
                 <Route
                     path="/favorites"
@@ -29,9 +29,12 @@ function App() {
                 />
                 <Route
                     path="/detail/:id"
-                    element={<Detail digimon={garumon}/>}
+                    element={<Detail/>}
                 />
             </Routes>
+            {
+                location?.pathname !== '/' ? <Button/> : null
+            }
         </>
     );
 }

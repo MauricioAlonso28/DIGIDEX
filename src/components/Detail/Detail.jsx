@@ -1,6 +1,6 @@
 import style from './detail.module.css'
 import axios from "axios";
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import InfoCard from './InfoCard';
 
@@ -11,6 +11,7 @@ function Detail(){
     const [digimon, setDigimon] = useState({});
     const [newId, setNewId] = useState(id);
     const [styleCard, setStyleCard] = useState('opacity-0')
+    const navigate = useNavigate()
 
     // FUNCTION TO CALL THE API
     async function callApi (){
@@ -47,26 +48,36 @@ function Detail(){
     // FUNCTION TO PRIOR EVOLUTION
     function priorEv (e){
         e.preventDefault() 
-        PriorEv !== null && PriorEv.id > 0 ? setNewId(PriorEv.id) : window.alert("This Digimon doesn't have a prior evolution")
+        if (PriorEv !== null && PriorEv.id > 0){
+            setNewId(PriorEv.id)
+            navigate(`/detail/${PriorEv.id}`)
+        } else {
+            window.alert("This Digimon doesn't have a prior evolution")
+        }
     }
 
     // FUNCTION TO NEXT EVOLUTION
     function nextEv (e){
         e.preventDefault() 
-        NextEv !== null  ? setNewId(NextEv.id) : window.alert("This Digimon doesn't have a next evolution")
+        if (NextEv !== null && NextEv.id > 0){
+            setNewId(NextEv.id)
+            navigate(`/detail/${NextEv.id}`)
+        } else {
+            window.alert("This Digimon doesn't have a prior evolution")
+        }
     }
 
     return(
         <>
-            <div className={style.container}>
+            <div className={style.container} key={digimon.id}>
                 <InfoCard
                     URL={URL}
                     FIELDS={FIELDS}
                     closeInfo={closeInfo}
                     digimon={digimon}
-                    style={styleCard}
+                    styleX={styleCard}
                 /> 
-                <div className={style.digicard}>
+                <div className={style.digicard} key={digimon.id}>
                     {
                         URL !== null ? <img className={style.img} src={URL} alt={digimon.name} /> : <img className={style.img}  src={require('../../resources/gif-video/loading-detail.gif')} alt='Loading...'/>
                     }
