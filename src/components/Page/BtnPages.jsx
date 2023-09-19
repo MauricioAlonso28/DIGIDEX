@@ -24,7 +24,7 @@ function BtnPages (){
     }, [])
     return (
         <>
-            <div className="w-full flex items-center justify-center fixed bottom-5 gap-1">
+            <div className="w-full flex items-center justify-center gap-1">
                 {
                     buttons?.map((i) => {
                         return (

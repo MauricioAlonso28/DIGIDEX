@@ -45,8 +45,8 @@ function Pages (){
                         <p className="font-xl text-zinc-100">Cargando Digimons...</p>
                     )
                 }
+                <BtnPages/>
             </div>
-            <BtnPages/>
         </>
     )
 }
