@@ -1,7 +1,7 @@
 import style from './navbar.module.css'
-import { NavLink } from "react-router-dom"
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { NavLink} from "react-router-dom"
+import { useState} from 'react';
+import { useNavigate} from 'react-router-dom';
 
 
 function Navbar (){
@@ -24,6 +24,8 @@ function Navbar (){
         e.preventDefault()
         navigate(`/detail/${id}`)
     }
+
+
 
     return (
         <>  

@@ -1,6 +1,6 @@
 import style from './detail.module.css'
 import axios from "axios";
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate} from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import InfoCard from './InfoCard';
 
@@ -9,14 +9,13 @@ const URL_API = "https://www.digi-api.com/api/v1/digimon/"
 function Detail(){
     const { id } = useParams()
     const [digimon, setDigimon] = useState({});
-    const [newId, setNewId] = useState(id);
     const [styleCard, setStyleCard] = useState('opacity-0')
     const navigate = useNavigate()
 
     // FUNCTION TO CALL THE API
     async function callApi (){
         try {
-            const { data } = await axios.get(`${URL_API}${newId}`)
+            const { data } = await axios.get(`${URL_API}${id}`)
 
             data.name ? setDigimon(data) : window.alert('No Details');
         } catch (error) {
@@ -26,7 +25,7 @@ function Detail(){
 
     useEffect(() => {
         callApi()
-    }, [newId])
+    }, [id])
 
     const URL = digimon.images ? digimon.images[0].href : null;
     const FIELDS = digimon.fields ? digimon.fields : null
@@ -49,7 +48,6 @@ function Detail(){
     function priorEv (e){
         e.preventDefault() 
         if (PriorEv !== null && PriorEv.id > 0){
-            setNewId(PriorEv.id)
             navigate(`/detail/${PriorEv.id}`)
         } else {
             window.alert("This Digimon doesn't have a prior evolution")
@@ -60,10 +58,9 @@ function Detail(){
     function nextEv (e){
         e.preventDefault() 
         if (NextEv !== null && NextEv.id > 0){
-            setNewId(NextEv.id)
             navigate(`/detail/${NextEv.id}`)
         } else {
-            window.alert("This Digimon doesn't have a prior evolution")
+            window.alert("This Digimon doesn't have a next evolution")
         }
     }
 

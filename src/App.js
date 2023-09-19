@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useLocation, Routes, Route } from "react-router-dom";
+import { useLocation, Routes, Route, useParams } from "react-router-dom";
 import { useDispatch, useSelector} from 'react-redux'
 import { addDigimon } from "./features/digimon/digimonSlice";
 import { useEffect } from "react";
@@ -15,6 +15,7 @@ import Pages from "./components/Page/Pages";
 const URL_API = "https://www.digi-api.com/api/v1/digimon"
 
 function App() {
+    const { id } = useParams()
     const location = useLocation()
     const dispatch = useDispatch()
     const { digimons } = useSelector((state) => state.digimons)
@@ -63,7 +64,7 @@ function App() {
                 />
                 <Route
                     path="/detail/:id"
-                    element={<Detail/>}
+                    element={<Detail key={id}/>}
                 />
                 <Route
                     path="/page/:id"
