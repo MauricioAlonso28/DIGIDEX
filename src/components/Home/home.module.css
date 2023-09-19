@@ -12,7 +12,7 @@
     transition: all 0.3s ease-in-out;
 }
 .divCard:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 .imgCard {
     position: absolute;

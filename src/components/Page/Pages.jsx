@@ -1,18 +1,35 @@
-import BtnPages from "../Page/BtnPages";
-import Card from "./Card"
-import {useSelector} from 'react-redux'
+import { useSelector } from "react-redux"
+import BtnPages from "./BtnPages"
+import Card from "../Home/Card";
+import { useEffect, useState } from "react";
 
-function Home (){
+function Pages (){
     const { digimons } = useSelector((state) => state.digimons)
-    const firstDigimons = digimons.slice(0, 24);
+    const { index } = useSelector((state) => state.digimons)
+    const [ arrDigimon, setArrDigimon ] = useState([])
 
-    return (
+    useEffect(() => {
+        let pagesArray= []
+        let num1 = 0;
+        let num2 = 24;
+
+        for (let i = 0; i < index; i++) {
+            pagesArray = digimons.slice(num1, num2)
+            num1 += 24
+            num2 += 24
+        }
+        setArrDigimon(pagesArray)
+    }, [index])
+    
+
+
+    return(
         <>
             <div className="w-11/12 mx-auto flex justify-center items-center pt-20 px-14 pb-20 flex-wrap gap-48">
                 {/* LOOP THROUGH EACH DIGIMON */}
                 {
-                    firstDigimons.length > 0 ? (
-                        firstDigimons.map((obj) =>{
+                    arrDigimon.length > 0 ? (
+                        arrDigimon.map((obj) =>{
                             return(
                                 <>
                                     <Card
@@ -34,4 +51,4 @@ function Home (){
     )
 }
 
-export default Home
+export default Pages
