@@ -35,15 +35,26 @@ function Card ({id, image, name}){
 
     return (
         <>
-            <div className={style.divCard} key={id}>
-                <Link to={`/detail/${id}`}>
-                    <img className={style.imgCard} src={image} alt={name} />
-                </Link>
-                {
-                    myFav 
-                    ? <button className={style.btn} onClick={deleteMyFav}>❤️</button>
-                    : <button className={style.btn} onClick={addMyFav}>🤍</button>
-                }
+            <div 
+                className={`h-80 w-card relative flex justify-center items-center hover:scale-110 ${style.divCard}`} 
+                key={id}>
+                    <Link to={`/detail/${id}`}>
+                        <img 
+                            className={`absolute h-Card w-Card rounded-small top-ss left-sx ${style.imgCard}`} 
+                            src={image} 
+                            alt={name} />
+                    </Link>
+                    {
+                        myFav 
+                        ? <button 
+                            className={`absolute bottom-sb left-sl ${style.btn}`} 
+                            onClick={deleteMyFav}>❤️
+                          </button> 
+                        : <button 
+                            className={`absolute bottom-sb left-sl ${style.btn}`} 
+                            onClick={addMyFav}>🤍
+                        </button>
+                    }
             </div>
         </>
     )

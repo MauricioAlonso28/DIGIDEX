@@ -1,13 +1,7 @@
-.title {
-    font-family: 'Pixel Digivolve', sans-serif;
-}
 .input {
-    height: 22px;
     background-color: rgba(72, 79, 93, 0.548);
-    font-family: 'Pixel Digivolve', sans-serif;;
 }
 .btn {
-    font-family: 'Pixel Digivolve', sans-serif;
     --color: #000000;
     --background-color: #d8d8d8;
     --border-color: darken(#d8d8d8, 7.5%);
@@ -16,13 +10,9 @@
     padding: 0.4rem 0.8rem;
     border: solid 1px var(--border-color);
     outline: none;
-    position: relative;
     border-radius: 0.5rem;
-    user-select: none;
     box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.4), 0 -0.3rem 0.6rem rgba(0, 0, 0, 0.2) inset;
     transition: box-shadow 64ms ease-out;
-    font-size: 15px;
-    transform: skew(-5deg, 0);
 }
 .btn:after {
     content: "";

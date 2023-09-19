@@ -8,9 +8,11 @@ module.exports = {
         center: true,
       },
       fontFamily: {
-        sans: ['Arial', 'sans'], 
+        sans: ['Arial', 'sans'],
+        'digimon': ['Pixel Digivolve', 'sans-serif'] 
       },
       colors: {
+        'primaryBg': '--color-primary',
         'primary': '#FF5733',
         'blue': '#1fb6ff',
         'purple': '#7e5bef',
@@ -26,6 +28,7 @@ module.exports = {
         'xs': '10px',
         's': '16px',
         'm': '20px',
+        'ml': '22px',
         'l': '28px',
         'xl': '36px',
         'xxl':'48px',
@@ -33,6 +36,7 @@ module.exports = {
         '100': '100px'
       },
       spacing: {
+        'none': '0',
         '0': '4px',
         '1': '8px',
         '2': '12px',
@@ -40,11 +44,26 @@ module.exports = {
         '4': '24px',
         '5': '32px',
         '6': '48px',
+        'Card': '73px',
+        'ss': '20.5%',
+        'sb': '22.5%',
+        'sx': '24.5%',
+        'sl': '27.3%'
       },
       skew: {
         '0': '0',
+        '-5deg': '-5deg',
         '-20': '-20deg',
-      }
+      },
+      height: {
+        'ml': '22px',
+      },
+      width: {
+        'card': '200px'
+      },
+      borderRadius: {
+        'small': '5px'
+      },
     },
   },
   plugins: [],

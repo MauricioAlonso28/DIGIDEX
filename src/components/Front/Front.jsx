@@ -1,12 +1,12 @@
 import style from './front.module.css'
 import { Link } from 'react-router-dom'
 
-function Front (props){
+function Front (){
     return(
         <>
-            <div className={style.test}>
+            <div className={`w-full h-full absolute flex justify-center items-center top-none left-none ${style.front}`}>
                 <Link to={'/home'}>
-                    <button  className={`text-white py-2 px-4 rounded text-xl ${style.btn}`}>
+                    <button  className={`text-white py-2 px-4 rounded text-100 ${style.btn}`}>
                         START
                     </button>
                 </Link>

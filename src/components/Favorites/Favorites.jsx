@@ -14,7 +14,7 @@ function Favorites (){
     return (
         <>
             <div className='flex justify-center items-center w-full p-6'>
-                <select className={`bg-slate-500 text-white border-0 rounded-md py-0.5 px-1 font-mono font-bold shadow ${style.selector}`} name='' id='' onChange={handleOrder}>
+                <select className={`bg-slate-500 text-white border-0 rounded-md py-0.5 px-1 font-mono font-bold ${style.selector}`} name='' id='' onChange={handleOrder}>
                     <option className='rounded-sm' value="asc">Ascending</option>
                     <option className='rounded-sm' value="desc">Descending</option>
                 </select>

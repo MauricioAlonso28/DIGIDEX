@@ -62,6 +62,9 @@ function App() {
                     path="/favorites"
                     element={<Favorites/>}
                 />
+                {/* <Route
+                    path="/add"
+                /> */}
                 <Route
                     path="/detail/:id"
                     element={<Detail key={id}/>}

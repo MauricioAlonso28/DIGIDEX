@@ -1,5 +1,6 @@
-import { useNavigate } from "react-router-dom"
 import style from './button.module.css'
+import { useNavigate } from "react-router-dom"
+
 function Button (){
     const navigate = useNavigate()
 
@@ -11,7 +12,7 @@ function Button (){
     return(
         <>
             <button 
-                className={`${style.btn} ${style.btnInfo}`}
+                className={`fixed select-none text-s -skew-x-5deg -skew-y-0 outline-none font-digimon  ${style.btn} ${style.btnInfo}`}
                 onClick={handleStart}>
                     START
             </button>

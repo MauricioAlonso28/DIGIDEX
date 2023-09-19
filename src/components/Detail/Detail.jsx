@@ -66,7 +66,7 @@ function Detail(){
 
     return(
         <>
-            <div className={style.container} key={digimon.id}>
+            <div className={`flex justify-center items-center w-full h-4/5`} key={digimon.id}>
                 <InfoCard
                     URL={URL}
                     FIELDS={FIELDS}
@@ -74,14 +74,14 @@ function Detail(){
                     digimon={digimon}
                     styleX={styleCard}
                 /> 
-                <div className={style.digicard} key={digimon.id}>
+                <div className={`flex justify-center items-center relative ${style.digicard}`} key={digimon.id}>
                     {
                         URL !== null ? <img className={style.img} src={URL} alt={digimon.name} /> : <img className={style.img}  src={require('../../resources/gif-video/loading-detail.gif')} alt='Loading...'/>
                     }
                     {/* BUTTONS */}
-                    <button className={`absolute ${style.btn} ${style.btnI}`} onClick={openInfo}>?</button>
-                    <button className={`absolute ${style.btn} ${style.btnN}`} onClick={nextEv}>Next Ev</button>
-                    <button className={`absolute ${style.btn} ${style.btnP}`} onClick={priorEv}>Prior Ev</button>
+                    <button className={`absolute font-bold ${style.btn} ${style.btnI}`} onClick={openInfo}>?</button>
+                    <button className={`absolute font-bold ${style.btn} ${style.btnN}`} onClick={nextEv}>Next Ev</button>
+                    <button className={`absolute font-bold ${style.btn} ${style.btnP}`} onClick={priorEv}>Prior Ev</button>
                 </div>
             </div>
         </>

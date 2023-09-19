@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alfa+Slab+One&family=Rubik+Iso&display=swap');
 @import url('https://fonts.cdnfonts.com/css/pixel-digivolve');
 
+:root {
+    --color-primary: 72, 79, 93, 0.548;
+}
+
 body {
     margin: 0;
     padding: 0;
