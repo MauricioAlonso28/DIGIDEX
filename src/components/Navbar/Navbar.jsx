@@ -30,7 +30,7 @@ function Navbar (){
     return (
         <>  
             <div className="flex justify-around mx-auto bg-slate-500 h-20 relative items-center shadow-lg shadow-slate-900">
-                <div className="absolute left-10 flex justify-center items-center">
+                <div className="absolute left-5 flex justify-center items-center">
                     <img className="h-6 w-6 relative" src={require('../../resources/img/digivice-nv.webp')} alt="digivice-logo" />
                     {
                         showInput ? (
@@ -62,7 +62,7 @@ function Navbar (){
                     <span className="text-white">DIGI</span>
                     <span className="text-blue">DEX</span>
                 </h1>
-                <div className="absolute right-10 flex justify-around p-1.5 gap-5">
+                <div className="absolute right-5 flex justify-around p-1.5 gap-5">
                     <NavLink 
                         className={`font-digimon relative select-none -skew-x-5deg skew-y-0 text-s ${style.btn} ${style.btnInfo}`} 
                         to={'/home'}>
@@ -72,6 +72,11 @@ function Navbar (){
                         className={`font-digimon relative select-none -skew-x-5deg skew-y-0 text-s ${style.btn} ${style.btnInfo}`} 
                         to={'/favorites'}>
                             Favorites
+                    </NavLink>
+                    <NavLink 
+                        className={`font-digimon relative select-none -skew-x-5deg skew-y-0 text-s ${style.btn} ${style.btnInfo}`} 
+                        to={'/add'}>
+                            Add
                     </NavLink>
                 </div>
             </div>

@@ -1,7 +1,8 @@
-import style from './detail.module.css'
 import axios from "axios";
 import { useParams, useNavigate} from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
+import style from './detail.module.css'
 import InfoCard from './InfoCard';
 
 const URL_API = "https://www.digi-api.com/api/v1/digimon/"
@@ -11,13 +12,19 @@ function Detail(){
     const [digimon, setDigimon] = useState({});
     const [styleCard, setStyleCard] = useState('opacity-0')
     const navigate = useNavigate()
+    const { digimonsAdded } = useSelector((state) => state.digimons)
 
     // FUNCTION TO CALL THE API
     async function callApi (){
         try {
-            const { data } = await axios.get(`${URL_API}${id}`)
-
-            data.name ? setDigimon(data) : window.alert('No Details');
+            if (id > 1422) {
+                const digimonFound = digimonsAdded.find((obj) => obj.id === Number(id))
+                
+                digimonFound.name ? setDigimon(digimonFound) : window.alert("There aren't details for this Digimon");
+            } else {
+                const { data } = await axios.get(`${URL_API}${id}`)
+                data.name ? setDigimon(data) : window.alert("There aren't details for this Digimon");
+            }
         } catch (error) {
             console.log(error.message);
         }

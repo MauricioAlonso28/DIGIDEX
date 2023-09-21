@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux'
+import { orderFav } from '../../features/fav/favSlice'
 import Card from '../Home/Card'
 import style from './favorites.module.css'
-import { orderFav } from '../../features/fav/favSlice'
 
 function Favorites (){
     const { myFavorites } = useSelector((state) => state.favorites)
