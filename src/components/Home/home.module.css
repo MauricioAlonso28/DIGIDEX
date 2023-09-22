@@ -11,3 +11,11 @@
 .btn:hover {
     transform: scale(1.2);
 }
+.loading {
+    background: url('../../resources/gif-video/loading-gif.gif');
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center;
+    height: 400px;
+    width: 400px;
+}

@@ -39,3 +39,10 @@
 .btnInfo:active {
     --color: #ececec;
 }
+@media (width <= 768px) {
+    .btn {
+        font-size: 13px;
+        padding: 0.2rem 0.3rem;
+        border-radius: 0.5rem;
+    }
+}

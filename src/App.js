@@ -51,9 +51,9 @@ function App() {
                 const { fields } = await data.content
 
                 fields.map((obj) => {
-                    if(levels.length < 10){
-                        dispatch(addLevels(obj))
-                    }
+                if(levels.length < 10){
+                    dispatch(addLevels(obj))
+                }
                 })
                 count++
             }

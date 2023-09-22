@@ -41,4 +41,19 @@
 .btnInfo:active {
     --color: #ececec;
 }
+
+@media (width <= 850px) {
+    .btn {
+        font-size: 13px;
+        padding: 0.2rem 0.4rem;
+    }
+    .navbar {
+        gap: 10px;
+        right: 10px;
+    }
+    .title {
+        font-size: 25px;
+    }
+}
+
   

@@ -1,0 +1,14 @@
+@media (width <= 1920px){
+    .div {
+        gap: 3px;
+    }
+    .btn {
+        padding: 0 1px 0 1px;
+    }
+}
+@media (width <= 1440px) {
+    .btn {
+        font-size: 12px;
+        padding: 0.5px 1px;
+    }
+}

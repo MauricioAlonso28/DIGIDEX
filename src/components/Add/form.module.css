@@ -38,4 +38,80 @@
 .btnInfo:active {
     --color: #ececec;
 }
-  
+.input {
+    display: block;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    background: #e6e8e9;
+    padding: 2px;
+    padding-left: 10px;
+    height: 30px;
+    font-size: 14px;
+    box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+}
+.input {
+    color: gray
+}
+.inputP {
+    display: block;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    background: #e6e8e9;
+    padding: 2px;
+    padding-left: 10px;
+    height: 30px;
+    font-size: 14px;
+    box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+}
+.inputP::placeholder {
+    color: gray
+}
+@media (width <= 1920px) {
+    .input {
+        left: 2.5rem;
+    }
+}
+@media (width <= 1540px) {
+    .input {
+        left: 0.8rem;
+    }
+} 
+@media (width <=1440px) {
+    .divForm {
+        width: 85%;
+        height: 600px;
+    }
+    .img1 {
+        height: 50px;
+    }
+    .img2 {
+        height: 70px;
+    }
+    .img3 {
+        height: 75px;
+        top: 50%;
+        right: 20px;
+    }
+    .img4 {
+        height: 60px;
+    }
+    .label {
+        font-size: 12px;
+    }
+    .inputP, .input {
+        font-size: 10px;
+    }
+    .input {
+        width: 135px;
+    }
+} 
+@media (width <= 850px) {
+    .images {
+        display : none ;
+    }
+    .form {
+        width: 100%;
+    }
+}

@@ -169,39 +169,20 @@ function Form (){
 
     return(
         <>
-            <h1 className="font-mono font-bold text-center text-3xl h-10 w-full flex items-center justify-center" >ADD A NEW DIGIMON</h1>
-            <form onSubmit={createDigimon} className="grid grid-cols-2 grid-rows-4 h-4/5 w-75 font-mono relative">
-                <div className='flex flex-col justify-center items-center relative'>
-                    <label className='absolute top-4 left-16' htmlFor="name">Name:</label>
-                    <input className='border-1 border-black rounded-xss px-1 py-0 text-12 bg-slate-200 text-slate-950' name='name' type="text" value={newDigimon.name} onChange={handleChange} placeholder="Insert Digimon's name" required/>
-                </div>
-                <div className='flex flex-col justify-center items-center relative'>
-                    <label className='absolute top-4 left-16' htmlFor="image">Image:</label>
-                    <input className='border-1 rounded-xss px-1 py-0 text-12 bg-slate-200 text-slate-950 ' name='image' type="text" value={newDigimon.image} onChange={handleChange} placeholder="Insert Url" required/>
-                </div>
-                <div className='flex flex-col justify-center items-center relative'>
-                    <label className='absolute top-4 left-16' htmlFor="releaseDate">ReleaseDate:</label>
-                    <input className='border-1 rounded-xss px-1 py-0 text-12 bg-slate-200 text-slate-950 ' name='releaseDate' type="text" value={newDigimon.releaseDate} onChange={handleChange} placeholder="Insert release date" required/>
-                </div>
-                {/* ANTIBODY */}
-                <div className='flex flex-col justify-center items-center relative'>
-                    <label className='absolute top-4 left-16' htmlFor="xAntibody">X-Antibody:</label>
-                    <select className='border-1 rounded-xss px-1 py-0 text-12 bg-slate-200 text-slate-950 w-38' name='xAntibody' id='' onChange={handleChange}>
-                        {
-                            xAntibody?.map((obj) => {
-                                return(
-                                    <>
-                                        <option value={obj.toString()}>{obj.toString()}</option>
-                                    </>
-                                )
-                            })
-                        }
-                    </select>
-                </div>
-                {/* LEVELS */}
-                <div className='flex flex-col justify-center items-center relative'>
-                    <label className='absolute top-4 left-16' htmlFor="level">Level:</label>
-                    <select className='border-1 rounded-xss px-1 py-0 text-12 bg-slate-200 text-slate-950 w-38' name='level' id='' onChange={handleChange}>
+            <h1 className="font-mono relative font-bold text-center text-3xl h-10 w-full flex items-center justify-center -skew-x-20" >ADD A NEW DIGIMON</h1>
+            <form onSubmit={createDigimon} className={`h-4/5 w-75 font-mono relative grid grid-cols-2 pt-6 gap-3 ${style.form}`} >
+                <div className='flex flex-col justify-center items-center h-full'>
+                    <label className={style.label} htmlFor="name">Name:</label>
+                    <input className={`rounded-xss px-1 py-0 text-12 bg-slate-200 text-slate-950 ${style.inputP}`} name='name' type="text" value={newDigimon.name} onChange={handleChange} placeholder="Insert Digimon's name" required/>
+                        <br/>
+                        <br />
+                    <label className={style.label} htmlFor="releaseDate">ReleaseDate:</label>
+                    <input className={`rounded-xss px-1 py-0 text-12 bg-slate-200 text-slate-950 ${style.inputP}`} name='releaseDate' type="text" value={newDigimon.releaseDate} onChange={handleChange} placeholder="Insert release date" required/>
+                        <br/>
+                        <br />
+                    {/* LEVELS */}
+                    <label className={style.label} htmlFor="level">Level:</label>
+                    <select className={`rounded-xs px-1 py-0 text-12 bg-slate-200 text-slate-950 ${style.input} w-38`} name='level' id='' onChange={handleChange}>
                         {
                             levels?.map((obj) => {
                                 return(
@@ -212,26 +193,11 @@ function Form (){
                             })
                         }
                     </select>
-                </div>
-                {/* ATTRIBUTES */}
-                <div className='flex flex-col justify-center items-center relative'>
-                    <label className='absolute top-4 left-16' htmlFor="attribute">Attribute:</label>
-                    <select className='border-1 rounded-xss px-1 py-0 text-12 bg-slate-200 text-slate-950 w-38' name='attribute' id='' onChange={handleChange}>
-                        {
-                            attributes?.map((obj) => {
-                                return(
-                                    <>
-                                        <option value={obj.name}>{obj.name}</option>
-                                    </>
-                                )
-                            })
-                        }
-                    </select>
-                </div>
-                {/* TYPES */}
-                <div className='flex flex-col justify-center items-center relative'>
-                    <label className='absolute top-4 left-16' htmlFor="type">Type:</label>
-                    <select className='border-1 rounded-xss px-1 py-0 text-12 bg-slate-200 text-slate-950 w-38' name='type' id='' onChange={handleChange}>
+                        <br/>
+                        <br />
+                    {/* TYPES */}
+                    <label className={style.label} htmlFor="type">Type:</label>
+                    <select className={`border-1 rounded-xss px-1 py-0 text-12 bg-slate-200 text-slate-950 ${style.input} w-38`} name='type' id='' onChange={handleChange}>
                         {
                             types?.map((obj) => {
                                 return(
@@ -243,10 +209,44 @@ function Form (){
                         }
                     </select>
                 </div>
-                {/* SKILLS */}
-                <div className='flex flex-col justify-center items-center relative'>
-                    <label className='absolute top-4 left-16' htmlFor="skill">Skill:</label>
-                    <select className='border-1 rounded-xss px-1 py-0 text-12 bg-slate-200 text-slate-950 w-38' name='skill' id='' onChange={handleChange}>
+                <div className='flex flex-col justify-center items-center h-full'>
+                    <label className={style.label} htmlFor="image">Image:</label>
+                    <input className={`border-1 rounded-xss px-1 py-0 text-12 bg-slate-200 text-slate-950 ${style.inputP}`} name='image' type="text" value={newDigimon.image} onChange={handleChange} placeholder="Insert Url" required/>
+                        <br/>
+                        <br />
+                    {/* ANTIBODY */}
+                    <label className={style.label} htmlFor="xAntibody">X-Antibody:</label>
+                    <select className={`border-1 rounded-xss px-1 py-0 text-12 bg-slate-200 text-slate-950 ${style.input} w-38`} name='xAntibody' id='' onChange={handleChange}>
+                        {
+                            xAntibody?.map((obj) => {
+                                return(
+                                    <>
+                                        <option value={obj.toString()}>{obj.toString()}</option>
+                                    </>
+                                )
+                            })
+                        }
+                    </select>
+                        <br/>
+                        <br />
+                    {/* ATTRIBUTES */}
+                    <label className={style.label} htmlFor="attribute">Attribute:</label>
+                    <select className={`border-1 rounded-xss px-1 py-0 text-12 bg-slate-200 text-slate-950 ${style.input} w-38`} name='attribute' id='' onChange={handleChange}>
+                        {
+                            attributes?.map((obj) => {
+                                return(
+                                    <>
+                                        <option value={obj.name}>{obj.name}</option>
+                                    </>
+                                )
+                            })
+                        }
+                    </select>
+                        <br/>
+                        <br />
+                    {/* SKILLS */}
+                    <label className={style.label} htmlFor="skill">Skill:</label>
+                    <select className={`border-1 rounded-xss px-1 py-0 text-12 bg-slate-200 text-slate-950 ${style.input} w-38`} name='skill' id='' onChange={handleChange}>
                         {
                             skills?.map((obj) => {
                                 return(

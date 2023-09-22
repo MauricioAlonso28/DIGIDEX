@@ -58,11 +58,11 @@ function Navbar (){
                         )
                     }
                 </div>
-                <h1 className={`font-bold text-xl -skew-x-20 font-digimon`}>
+                <h1 className={`font-bold text-xl -skew-x-20 font-digimon ${style.title}`}>
                     <span className="text-white">DIGI</span>
                     <span className="text-blue">DEX</span>
                 </h1>
-                <div className="absolute right-5 flex justify-around p-1.5 gap-5">
+                <div className={`absolute right-5 flex justify-around p-1.5 gap-5 ${style.navbar}`}>
                     <NavLink 
                         className={`font-digimon relative select-none -skew-x-5deg skew-y-0 text-s ${style.btn} ${style.btnInfo}`} 
                         to={'/home'}>

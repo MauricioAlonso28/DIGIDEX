@@ -11,6 +11,7 @@ function Detail(){
     const { id } = useParams()
     const [digimon, setDigimon] = useState({});
     const [styleCard, setStyleCard] = useState('opacity-0')
+    const [notInfo, setNotInfo] = useState('z-10')
     const navigate = useNavigate()
     const { digimonsAdded } = useSelector((state) => state.digimons)
 
@@ -42,12 +43,14 @@ function Detail(){
     // FUNCTION TO SEE THE INFO
     function openInfo (e){
         e.preventDefault()
-        setStyleCard('opacity-100')
+        setStyleCard('opacity-100 z-10')
+        setNotInfo('z-0')
     }
 
     function closeInfo (e){
         e.preventDefault()
-        setStyleCard('opacity-0')
+        setStyleCard('opacity-0 z-0')
+        setNotInfo('z-10')
     }
 
 
@@ -81,7 +84,7 @@ function Detail(){
                     digimon={digimon}
                     styleX={styleCard}
                 /> 
-                <div className={`flex justify-center items-center relative ${style.digicard}`} key={digimon.id}>
+                <div className={`flex justify-center items-center ${notInfo} relative ${style.digicard}`} key={digimon.id}>
                     {
                         URL !== null ? <img className={style.img} src={URL} alt={digimon.name} /> : <img className={style.img}  src={require('../../resources/gif-video/loading-detail.gif')} alt='Loading...'/>
                     }

@@ -43,7 +43,7 @@ function InfoCard ({URL, FIELDS, closeInfo, digimon, styleX}){
                     }
                     <div className={`${style.title}`}>
                         <button className={`absolute ${style.infoBtn}`} onClick={closeInfo}>X</button>
-                        <h3 className={`${style.name}`}>digimon.name</h3>
+                        <h3 className={`${style.name}`}>{digimon.name}</h3>
                     </div>
                     <img className={`${style.infoCardImg}`} src={URL} alt={digimon.name} />
                     {/* DETAILS */}

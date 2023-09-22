@@ -91,3 +91,45 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: black
 }
+
+@media (width <= 1920px) {
+    .bigContainer {
+        left: 3%;
+        width: 400px;
+        height: 600px;
+    }
+}
+
+@media (width <= 1440px) {
+    .digicard {
+        height: 350px;
+        width: 400px;
+        position: absolute;
+    }
+    .img {
+        height: 110px;
+        border-radius: 10px;
+        width: 110px;
+    }
+    .btn {
+        font-size: 8px;
+    }
+    .btnI {
+        left: 13%;
+        font-size: 13px;
+    }
+    .btnN {
+        right: 13%;
+    }
+    .btnP {
+        right: 12.5%;
+        bottom: 35%;
+    }
+    .btnFav:hover {
+        transform: scale(1.2);
+    }
+    .bigContainer {
+        position: relative;
+        left: 0;
+    }
+}
