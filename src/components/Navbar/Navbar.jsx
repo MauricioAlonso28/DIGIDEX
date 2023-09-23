@@ -29,9 +29,9 @@ function Navbar (){
 
     return (
         <>  
-            <div className="flex justify-around mx-auto bg-slate-500 h-20 relative items-center shadow-lg shadow-slate-900">
+            <div className={`flex justify-around mx-auto bg-slate-500 h-20 z-10 relative items-center shadow-lg shadow-slate-900 ${style.mainNavbar}`}>
                 <div className="absolute left-5 flex justify-center items-center">
-                    <img className="h-6 w-6 relative" src={require('../../resources/img/digivice-nv.webp')} alt="digivice-logo" />
+                    <img className={`h-6 w-6 relative ${style.searchbar}`} src={require('../../resources/img/digivice-nv.webp')} alt="digivice-logo" />
                     {
                         showInput ? (
                         <input 
@@ -45,15 +45,15 @@ function Navbar (){
                     {
                         showInput ? (
                         <button 
-                            className='button font-mono font-bold absolute text-s' 
+                            className={`button font-mono font-bold absolute ${style.plusSign}`}
                             onClick={handleDetail}>
-                                ?
+                                +
                         </button>
                         ) : (
                         <button 
-                            className='button font-mono font-bold absolute' 
+                            className={`button font-mono font-bold absolute text-s ${style.questionSign}`} 
                             onClick={handlePlusClick}>
-                                +
+                                ?
                         </button>
                         )
                     }

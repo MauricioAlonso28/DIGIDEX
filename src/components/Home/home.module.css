@@ -19,3 +19,12 @@
     height: 400px;
     width: 400px;
 }
+@media (width <= 430px){
+    .loading {
+        height: 260px;
+        width: 260px;
+    }
+    .textLoading {
+        font-size: 20px;
+    }
+}

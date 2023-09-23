@@ -1,3 +1,10 @@
 .selector {
     box-shadow: 0px 0px 0px 1px rgba(118, 118, 118, 0.181);
 }
+@media (width <= 430px) {
+    .selector {
+       position: absolute;
+       top: 25px;
+       font-size: 13px;
+    }
+}

@@ -36,7 +36,7 @@ function Home (){
                         <BtnPages/> 
                     </>
                     ) : <div className={`absolute top-1/3 flex text-center items-center justify-center  ${style.loading}`}>
-                            <p className="text-zinc-50 font-mono text-l">Loading...</p>
+                            <p className={`text-zinc-50 font-mono text-l ${style.textLoading}`}>Loading...</p>
                         </div>
                 }
             </div>

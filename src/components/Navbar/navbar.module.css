@@ -55,5 +55,30 @@
         font-size: 25px;
     }
 }
-
+@media (width <= 430px) {
+    .title {
+        display: none;
+    }
+    .btn {
+        font-size: 11px;
+        padding: 0.2rem 0.5rem;
+    }
+    .searchbar {
+        height: 36px;
+        width: 36px;
+    }
+    .questionSign, .plusSign {
+        font-size: 10px;
+    }
+    .input {
+        left: 34px;
+        font-size: 8px;
+        padding-left: 3px;
+        height: 16px;
+        width: 60px;
+    }
+    .mainNavbar {
+        height: 60px;
+    }
+}
   

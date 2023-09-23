@@ -133,3 +133,69 @@
         left: 0;
     }
 }
+@media (height <= 850px) {
+    .bigContainer {
+       top: 20px;
+    }
+    .digicard {
+        height: 250px;
+        width: 300px;
+    }
+    .img {
+        height: 80px;
+        border-radius: 10px;
+        width: 80px;
+    }
+}
+@media (width <= 430px) {
+    .btn {
+        font-size: 6px;
+    }
+    .btnI {
+        left: 13.5%;
+        font-size: 9px;
+    }
+    .btnN {
+        top: 34.5%;
+        right: 13%;
+    }
+    .btnP {
+        right: 12.5%;
+        bottom: 34.5%;
+    }
+    .bigContainer {
+        width: 310px;
+        height: 400px;
+    }
+    .btnFav {
+        right: 7px;
+        top: 5px;
+    }
+    .infoBtn {
+        top: 6px;
+    }
+    .btnFav, .infoBtn {
+        font-size: 10px;
+    }
+    .title {
+        height: 10%;
+    }
+    .name {
+        font-size: 15px;
+    }
+    .infoCardImg {
+        height: 29%;
+    }
+    .infoDetails {
+        height: 61%;
+    }
+    .subtitle {
+        font-size: 12px;
+    }
+    .span {
+        font-size: 9px;
+    }
+    .image {
+        height: 18px;
+    }
+}

@@ -19,3 +19,9 @@
     background-size: cover;
     background-position: center;
 }
+
+@media (width <= 430px) {
+    .btn {
+        font-size: 50px;
+    }
+}

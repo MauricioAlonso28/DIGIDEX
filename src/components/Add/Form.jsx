@@ -169,20 +169,18 @@ function Form (){
 
     return(
         <>
-            <h1 className="font-mono relative font-bold text-center text-3xl h-10 w-full flex items-center justify-center -skew-x-20" >ADD A NEW DIGIMON</h1>
-            <form onSubmit={createDigimon} className={`h-4/5 w-75 font-mono relative grid grid-cols-2 pt-6 gap-3 ${style.form}`} >
+            <h1 className={`font-mono relative font-bold text-center text-3xl h-10 w-full flex items-center justify-center -skew-x-20 ${style.title}`} >ADD A NEW DIGIMON</h1>
+            <form onSubmit={createDigimon} className={`h-4/5 w-75 font-mono relative grid grid-cols-2 pt-6 gap-3 ${style.formX}`} >
                 <div className='flex flex-col justify-center items-center h-full'>
                     <label className={style.label} htmlFor="name">Name:</label>
                     <input className={`rounded-xss px-1 py-0 text-12 bg-slate-200 text-slate-950 ${style.inputP}`} name='name' type="text" value={newDigimon.name} onChange={handleChange} placeholder="Insert Digimon's name" required/>
                         <br/>
-                        <br />
                     <label className={style.label} htmlFor="releaseDate">ReleaseDate:</label>
                     <input className={`rounded-xss px-1 py-0 text-12 bg-slate-200 text-slate-950 ${style.inputP}`} name='releaseDate' type="text" value={newDigimon.releaseDate} onChange={handleChange} placeholder="Insert release date" required/>
                         <br/>
-                        <br />
                     {/* LEVELS */}
                     <label className={style.label} htmlFor="level">Level:</label>
-                    <select className={`rounded-xs px-1 py-0 text-12 bg-slate-200 text-slate-950 ${style.input} w-38`} name='level' id='' onChange={handleChange}>
+                    <select className={`border-1 rounded-xss px-1 py-0 text-12 bg-slate-200 text-slate-950 ${style.input} w-38`} name='level' id='' onChange={handleChange}>
                         {
                             levels?.map((obj) => {
                                 return(
@@ -194,7 +192,6 @@ function Form (){
                         }
                     </select>
                         <br/>
-                        <br />
                     {/* TYPES */}
                     <label className={style.label} htmlFor="type">Type:</label>
                     <select className={`border-1 rounded-xss px-1 py-0 text-12 bg-slate-200 text-slate-950 ${style.input} w-38`} name='type' id='' onChange={handleChange}>
@@ -213,7 +210,6 @@ function Form (){
                     <label className={style.label} htmlFor="image">Image:</label>
                     <input className={`border-1 rounded-xss px-1 py-0 text-12 bg-slate-200 text-slate-950 ${style.inputP}`} name='image' type="text" value={newDigimon.image} onChange={handleChange} placeholder="Insert Url" required/>
                         <br/>
-                        <br />
                     {/* ANTIBODY */}
                     <label className={style.label} htmlFor="xAntibody">X-Antibody:</label>
                     <select className={`border-1 rounded-xss px-1 py-0 text-12 bg-slate-200 text-slate-950 ${style.input} w-38`} name='xAntibody' id='' onChange={handleChange}>
@@ -228,7 +224,6 @@ function Form (){
                         }
                     </select>
                         <br/>
-                        <br />
                     {/* ATTRIBUTES */}
                     <label className={style.label} htmlFor="attribute">Attribute:</label>
                     <select className={`border-1 rounded-xss px-1 py-0 text-12 bg-slate-200 text-slate-950 ${style.input} w-38`} name='attribute' id='' onChange={handleChange}>
@@ -243,7 +238,6 @@ function Form (){
                         }
                     </select>
                         <br/>
-                        <br />
                     {/* SKILLS */}
                     <label className={style.label} htmlFor="skill">Skill:</label>
                     <select className={`border-1 rounded-xss px-1 py-0 text-12 bg-slate-200 text-slate-950 ${style.input} w-38`} name='skill' id='' onChange={handleChange}>
@@ -258,7 +252,7 @@ function Form (){
                         }
                     </select>
                 </div>
-                <div className='flex justify-center items-center col-span-2 pt-5'>
+                <div className={`flex justify-center items-center col-span-2 pt-5 ${style.divBtn}`}>
                     <button type="submit" className={` font-digimon select-none -skew-x-5deg skew-y-0 text-s ${style.btn} ${style.btnInfo}`} >Create Digimon</button>
                 </div>
             </form>
