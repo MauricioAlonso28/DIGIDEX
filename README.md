@@ -25,31 +25,28 @@ Pagination-enabled application containing 1422 Digimons, which you can search by
 
 **Start**
 
-<img src="./img/login.gif" alt="" width="384" height="216" />
+<img src="./images/start.gif" alt="" width="384" height="216" />
 
-**Search Digimon**
-
-<img src="./img/detail.gif" alt="" width="384" height="216"/>
 
 **Detail**
 
-<img src="./img/detail.gif" alt="" width="384" height="216"/>
+<img src="./images/detail.gif" alt="" width="384" height="216"/>
 
 
 **Favorites**
 
-<img src="./img/favorites.gif" alt="" width="384" height="216"/>
+<img src="./images/favorites.gif" alt="" width="384" height="216"/>
 
 **Add Digimon**
-<img src="./img/favorites.gif" alt="" width="384" height="216"/>
+<img src="./images/add.gif" alt="" width="384" height="216"/>
 
 **Mobile Responsive**
 
-<img src="./img/mobile.gif" alt="" width="174" height="216"/>
+<img src="./images/mobile.gif" alt="" width="174" height="216"/>
 
 **Tablet Responsive**
 
-<img src="./img/tablet.gif" alt="" width="304" height="216"/>
+<img src="./images/tablet.gif" alt="" width="304" height="216"/>
 
 
 ## Installation
