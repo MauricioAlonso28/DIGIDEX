@@ -37,7 +37,9 @@ Pagination-enabled application containing 1422 Digimons, which you can search by
 
 <img src="./images/favorites.gif" alt="" width="384" height="216"/>
 
+
 **Add Digimon**
+
 <img src="./images/add.gif" alt="" width="384" height="216"/>
 
 **Mobile Responsive**
@@ -46,7 +48,7 @@ Pagination-enabled application containing 1422 Digimons, which you can search by
 
 **Tablet Responsive**
 
-<img src="./images/tablet.gif" alt="" width="304" height="216"/>
+<img src="./images/tablet.gif" alt="" width="294" height="216"/>
 
 
 ## Installation
