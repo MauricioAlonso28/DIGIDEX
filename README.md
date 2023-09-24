@@ -13,10 +13,10 @@ Pagination-enabled application containing 1422 Digimons, which you can search by
 
 
 ## Stack
-. React
-. Redux Toolkit
-. TailwindCss
-. CSS Modules
+_ React
+_ Redux Toolkit
+_ TailwindCss
+_ CSS Modules
 
 
 
